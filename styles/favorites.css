@@ -1,0 +1,35 @@
+/* /* .containerJokes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5vh;
+}
+
+.containerCats{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 7vh;
+    width: 100%;
+} */
+
+/* .table{
+    width: 50vb;
+    border: 2px solid black;
+    padding: 5px 2vb;
+    align-self: center;
+}  */
+
+.image{
+    height: 200px;
+    width: 200px;
+    border: 2px solid black;
+}
+
+.cell{
+    border: 1px solid lightgray;
+}
+
+.cellTop{
+    border-bottom: 1px solid black;
+}

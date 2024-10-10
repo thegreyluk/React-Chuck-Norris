@@ -12,6 +12,9 @@ export const roboto = Roboto({
 // Create a theme instance.
 const theme = createTheme({
   palette: {
+    background: {               //global page background
+      default: "#5acde8d5",     
+    },
     primary: {
       main: "#556cd6",
     },
@@ -25,6 +28,13 @@ const theme = createTheme({
   typography: {
     fontFamily: roboto.style.fontFamily,
   },
+  components: {
+    MuiButton: {
+      defaultProps: {
+        variant: 'outlined'
+      }
+    }
+  }
 });
 
 export default theme;

@@ -1,0 +1,70 @@
+.containerMain{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10vh 10vb;
+  }
+
+.containerGifs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3vh 10vb;
+    background: #5f84ff;
+    /* border: solid 2px blue; */
+    box-shadow: 2px 2px blue;
+    border-radius: 20px;
+  }
+
+  .containerGifs + p{
+    padding-top: 2vh;
+  }
+
+  .textGameover{
+    color: white;
+    font-size: 100px;
+    font-weight: bolder;
+  }
+
+.containerCombinedGifs > img{
+    width: 100px;
+  }
+
+  .containerCombinedGifs{
+    display: flex;
+  }
+
+  .imageGhost{
+    position: relative;
+    right: 120px; 
+    width: 120px; 
+    height: auto;
+    /* transform: translate(160px); 
+    transition: all 2s; */
+    animation: move 1s ease-in-out alternate infinite;
+  }
+
+  @keyframes move {
+    to { transform:translate(150px) }
+  }
+
+  .imagePacman{
+    width: 100px;
+    height: auto;
+  }
+
+.link{ 
+  margin-top: 5vh; 
+  border: 2px solid grey; 
+  padding: 10px 20px; 
+  background: white; 
+  border: solid 1px blue;
+  border-radius: 15px;
+  text-decoration: none;
+  color: black;
+}
+
+.text{
+  padding-top: 4vh;
+}
+

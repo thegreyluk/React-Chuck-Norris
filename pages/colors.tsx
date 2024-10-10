@@ -15,7 +15,7 @@ export default function Colors() {
         }}
       >
         <Container maxWidth="lg">
-          <Typography variant="h1">Colors</Typography>
+          <Typography sx={{paddingTop: "10vh"}}  variant="h1">Colors</Typography>
           <Box
             sx={{
               my: 4,

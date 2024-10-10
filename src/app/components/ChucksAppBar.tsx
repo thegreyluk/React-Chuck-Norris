@@ -1,4 +1,4 @@
-import AdbIcon from "@mui/icons-material/Adb";
+import MoodIcon from "@mui/icons-material/Mood";
 import MenuIcon from "@mui/icons-material/Menu";
 import AppBar from "@mui/material/AppBar";
 import Avatar from "@mui/material/Avatar";
@@ -14,6 +14,8 @@ import Typography from "@mui/material/Typography";
 import { useRouter } from "next/router";
 import * as React from "react";
 import { useAuth } from "../../auth/context/AuthContext";
+import Image from 'next/image';
+
 
 interface Page {
   title: string;
@@ -22,7 +24,10 @@ interface Page {
 
 const pages: Page[] = [
   { title: "Home", route: "/" },
+  { title: "Favorites", route: "/favorites" },
+  { title: "Cats", route: "/cats" },
   { title: "Colors", route: "/colors" },
+  { title: "Own Jokes", route: "/ownJokes" },
 ];
 
 function ChucksAppBar() {
@@ -57,10 +62,12 @@ function ChucksAppBar() {
   };
 
   return (
-    <AppBar position="static">
-      <Container maxWidth="xl">
-        <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
+    <AppBar position="static" sx={{ borderBottom: "4px solid darkblue" }}>
+
+      <Container maxWidth="xl" >
+
+        <Toolbar disableGutters >
+          < MoodIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
           <Typography
             variant="h6"
             noWrap
@@ -69,6 +76,7 @@ function ChucksAppBar() {
             sx={{
               mr: 2,
               display: { xs: "none", md: "flex" },
+              paddingRight: "20vb",
               fontFamily: "monospace",
               fontWeight: 700,
               letterSpacing: ".3rem",
@@ -76,7 +84,7 @@ function ChucksAppBar() {
               textDecoration: "none",
             }}
           >
-            CNC
+            Cuck Norris Jokes
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -115,7 +123,7 @@ function ChucksAppBar() {
               ))}
             </Menu>
           </Box>
-          <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
+          <MoodIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
           <Typography
             variant="h5"
             noWrap
@@ -148,9 +156,19 @@ function ChucksAppBar() {
 
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title={user?.email}>
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
+              {/* <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>     //Changed to new profile picture
                 <Avatar />
-              </IconButton>
+              </IconButton> */}
+              <Image src="/../public/userpicture.png"
+                onClick={handleOpenUserMenu}
+                alt="userpicture"
+                height={50}
+                width={50}
+                style={{
+                  borderRadius: "25px",
+                  boxShadow: "2px 2px black",
+                  marginTop: "7px"
+                }} />
             </Tooltip>
             <Menu
               sx={{ mt: "45px" }}
@@ -175,7 +193,7 @@ function ChucksAppBar() {
           </Box>
         </Toolbar>
       </Container>
-    </AppBar>
+    </AppBar >
   );
 }
 export default ChucksAppBar;

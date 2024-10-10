@@ -1,0 +1,14 @@
+.Button{
+  margin-left: 2vb;
+}
+
+.image{
+  height: 400px;
+  width: auto;
+  border: 2px solid black;
+}
+
+
+.hide{
+  display: none;
+}
